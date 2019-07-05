@@ -1,0 +1,29 @@
+site_name: Djedou UI Design System
+nav:
+  - Home: index.md
+
+# theme:
+#   name: 'material'
+#   palette:
+#     primary: 'blue'
+#     accent: 'blue'
+#   language: 'fr'
+
+# markdown_extensions:
+#   - admonition
+#   - codehilite:
+#       linenums: true
+#   - pymdownx.arithmatex
+#   - pymdownx.betterem:
+#       smart_enable: all
+#   - pymdownx.caret
+#   - pymdownx.critic
+#   - pymdownx.details
+#   - pymdownx.inlinehilite
+#   - pymdownx.magiclink
+#   - pymdownx.mark
+#   - pymdownx.smartsymbols
+#   - pymdownx.superfences
+#   - pymdownx.tasklist:
+#       custom_checkbox: true
+#   - pymdownx.tilde

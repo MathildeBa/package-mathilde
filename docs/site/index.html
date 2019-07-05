@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+        <title>Djedou UI Design System</title>
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="./css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href=".">Djedou UI Design System</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#modalform">ModalForm</a></li>
+        <li class="main "><a href="#inputbutton">InputButton</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="modalform">ModalForm</h2>
+<p>??? note "Exemple"</p>
+<pre><code>``` javascript
+import React, {Component} from "react";
+import ModalForm from "duidsystem-duidhtml/ModalForm";
+import { withStyles } from '@material-ui/styles';
+
+const styles = {
+    root: {
+    color: 'red',
+    },
+    modal:{
+        boxShadow:" 12px 12px 2px 1px rgba(0, 0, 255, .2)",
+    }
+};
+
+
+class Main extends Component{
+
+    render(){ 
+        const {classes} = this.props;
+        return(
+            &lt;div&gt;
+                &lt;ModalForm 
+                     modalStyle = {classes.modal}
+                     formStyle = {classes.root}
+                     name = "modalTest" 
+                &gt;
+                &lt;p&gt;duidhtml Modalform&lt;/p&gt; 
+                &lt;/ModalForm&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+export default withStyles(styles)(Main);
+
+```
+</code></pre>
+<p>??? note "Les props du composant ModalForm"  </p>
+<pre><code>| Props | Valeurs ou Types |
+|:-:|:-:|
+| modalStyle | de type __`objet`__ ou __`string`__ |
+| formStyle | de type __`objet`__ ou __`string`__ |
+| action | de type __`string`__ |
+| name | de type __`string`__ |
+| enctype | __`application/x-www-form-urlencoded`__ ou __`multipart/form-data`__ ou __`text/plain`__ |
+| target | __`_self`__ ou __`_parent`__ ou __`_top`__ ou __`_blank`__ |
+| acceptCharset | de type __`string`__ |
+| novalidate | de type __`booléen`__ |
+| autocomplete | __`on`__ ou __`off`__ |
+</code></pre>
+<h2 id="inputbutton">InputButton</h2>
+<p>??? note "Exemple"</p>
+<pre><code>``` javascript
+import React, {Component} from "react";
+import {InputButton} from "duidsystem-duidhtml";
+import { withStyles } from '@material-ui/styles';
+
+const styles = {
+    input: {
+        color: 'blue',
+    }
+};
+
+class Main extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+            name:"duidbtn",
+        }
+    }
+
+
+    render(){
+        const {classes} = this.props;
+        return(
+            &lt;div&gt;
+                &lt;InputButton
+                        name={this.state.name}
+                        style={classes.input}
+                /&gt;
+
+            &lt;/div&gt;
+        )
+    }
+}
+
+
+export default withStyles(styles)(Main);
+```
+</code></pre>
+<p>??? note "Les props du composant InputButton"  </p>
+<pre><code>| Props | Valeurs ou Types |
+|:-:|:-:|
+| onClick | de type __`function`__ |
+| onBlur | de type __`function`__ |
+| onFocus | de type __`function`__ |
+| onSubmit | de type __`function`__ |
+| name | de type __`string`__ |
+| form | de type __`string`__ |
+| disabled | de type __`booléen`__ |
+| autofocus | de type __`booléen`__ |
+| style | de type __`objet`__ ou __`string`__  |
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '.';</script>
+        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
+        <script src="./js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 0.16.3
+Build Date UTC : 2019-07-05 13:28:32
+-->

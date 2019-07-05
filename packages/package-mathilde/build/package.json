@@ -1,0 +1,43 @@
+{
+  "name": "package-mathilde",
+  "version": "1.0.2",
+  "private": false,
+  "description": "duidSystem est un Système de Design d'Interface Utilisateur pour les projects en React.",
+  "homepage": "https://github.com/MathildeBa/workshopreact",
+  "keywords": [
+    "react",
+    "react-component",
+    "becode",
+    "workshop"
+  ],
+  "author": "Mathilde BAQUET",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MathildeBa/workshopreact.git",
+    "directory": "packages/package-mathilde"
+  },
+  "bugs": {
+    "url": "https://github.com/MathildeBa/workshopreact/issues"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "main": "./index.js",
+  "module": "./esm/index.js"
+}

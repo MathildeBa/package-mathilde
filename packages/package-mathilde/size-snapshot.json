@@ -1,0 +1,7 @@
+{
+  "build/umd/package-mathilde.production.min.js": {
+    "bundled": 15145,
+    "minified": 6318,
+    "gzipped": 2362
+  }
+}
